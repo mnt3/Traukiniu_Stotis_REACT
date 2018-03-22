@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import Traukiniai from './komponentai/Traukiniai'
+import Vagonai from './komponentai/Vagonai'
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
       <h1>Traukiniu stotis</h1>
 <Traukiniai/>
+
 
       </div>
     );
