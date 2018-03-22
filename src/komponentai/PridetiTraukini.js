@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export default class PridetiSaskaitas extends React.Component {
+export default class PridetiTraukini extends React.Component {
   state = {
     data: "",
     gamintojas: "",
@@ -31,7 +31,7 @@ export default class PridetiSaskaitas extends React.Component {
 
    ;
 
-    axios.post(`http://localhost:8080/saskaitos`, {  data: this.state.data,
+    axios.post(`http://localhost:8080/traukiniai`, {  data: this.state.data,
     gamintojas: this.state.gamintojas,
     miestas: this.state.miestas })
       .then(res => {
@@ -47,20 +47,20 @@ export default class PridetiSaskaitas extends React.Component {
         <form onSubmit={this.handleSubmit} >
         <p>
           <label>
-            Israsanti imone:
-            <input type="text" name="imone" onChange={this.handleChange2} />
+            Traukinio pagaminimo data:
+            <input type="text" name="data" onChange={this.handleChange1} />
           </label>
           </p>
           <p>
           <label>  
-            Gavejas:
-            <input type="text" name="gavejas" onChange={this.handleChange3} />
+            Gamintojas:
+            <input type="text" name="gamintojas" onChange={this.handleChange2} />
           </label>
           </p>
           <p>
           <label>  
-            Saskaitos numeris:
-            <input type="text" name="numeris" onChange={this.handleChange1} />
+            Miestas:
+            <input type="text" name="miestas" onChange={this.handleChange3} />
           </label>
           </p>
           <button type="submit" >Add</button>

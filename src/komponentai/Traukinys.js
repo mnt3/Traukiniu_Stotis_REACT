@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Vagonai from './Vagonai'
+import PridetiKVagona from './PridetiKeleiviniVagona'
 
 class Traukinys extends React.Component{
 
@@ -38,6 +39,7 @@ render(){
             
                 
                  </td>
+                 <td>Prideti vagona <PridetiKVagona key={this.props.traukinys.id} traukinys={this.props.traukinys.id}/></td>
            
             
             
