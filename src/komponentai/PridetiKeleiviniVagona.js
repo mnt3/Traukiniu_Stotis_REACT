@@ -6,7 +6,7 @@ export default class PridetiVagona extends React.Component {
     
     gamintojas: "",
     kiekis: "",
-    kaina:"",
+    kaina: "",
     turis: "",
     klase: ""
 
@@ -44,12 +44,13 @@ export default class PridetiVagona extends React.Component {
 
    ;
 
-    axios.put(`http://localhost:8080/traukiniai/`+this.props.traukinys.id+`/Kvagonas`, {  gamintojas: this.state.gamintojas,
+    axios.put(`http://localhost:8080/traukiniai/`+this.props.traukinys+`/Kvagonas`, {  gamintojas: this.state.gamintojas,
     kiekis: this.state.kiekis,
-    kaina: this.state.kainas, 
+    kaina: this.state.kaina, 
     turis: this.state.turis,
   klase: this.state.klase })
       .then(res => {
+        console.log("kuriamas Kvagonas kurio id" +this.props.traukinys);
         console.log(res);
         console.log(res.data);
       })
@@ -90,7 +91,7 @@ export default class PridetiVagona extends React.Component {
             <input type="text" name="klase" onChange={this.handleChange5} />
           </label>
           </p>
-          <button type="submit" >Add</button>
+          <button type="submit" onClick={this.handleSubmit}>Add</button>
           
         </form>
        

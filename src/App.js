@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import {Accordion,AccordionTab} from 'primereact/components/accordion/Accordion';
+import {TabMenu} from 'primereact/components/tabmenu/TabMenu';
 import './App.css';
 import Traukiniai from './komponentai/Traukiniai'
 import Vagonai from './komponentai/Vagonai'
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Traukiniu stotis</h1>
+     
 <Traukiniai/>
 
 <PridetiTraukini/>

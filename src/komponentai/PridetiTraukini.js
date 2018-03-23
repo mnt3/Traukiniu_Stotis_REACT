@@ -63,7 +63,7 @@ export default class PridetiTraukini extends React.Component {
             <input type="text" name="miestas" onChange={this.handleChange3} />
           </label>
           </p>
-          <button type="submit" >Add</button>
+          <button type="submit" onClick={this.handleSubmit}>Add</button>
           
         </form>
        
